@@ -17,7 +17,7 @@ public class AIUnitBehaviour : MonoBehaviour
     public float bulletSpeed = 20f;
 
     private GameObject target = null;
-    public string teamTag; // Tag to distinguish team
+    public string teamTag; 
 
     private float nextFireTime = 0f;
 
@@ -79,16 +79,12 @@ public class AIUnitBehaviour : MonoBehaviour
     {
         if (target == null) return;
 
-        // Aim turret at the target
+        
         Vector3 targetDirection = target.transform.position - turret.position;
         Quaternion targetRotation = Quaternion.LookRotation(targetDirection);
         turret.rotation = Quaternion.Slerp(turret.rotation, targetRotation, Time.deltaTime * speed);
 
-        // Move towards the target
-        //Vector3 direction = (target.transform.position - transform.position).normalized;
-        //transform.position += direction * speed * Time.deltaTime;
-
-        // Fire at the target
+        
         if (Time.time >= nextFireTime)
         {
             Fire();
@@ -119,87 +115,4 @@ public class AIUnitBehaviour : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, DetectionRange);
     }
 }
-
-
-//[Range(1, 15)]
-//[SerializeField] private float showRadius = 11;
-//[SerializeField] private float detectionCheckDelay = 0.1f;
-//private Transform target = null;
-//[SerializeField] private LayerMask playerLayerMask;
-//[SerializeField] private LayerMask visibiltyLayer;
-
-//public bool TargetVisible { get; private set; }
-
-//private void Start()
-//{
-//    StartCoroutine(DetectionCoroutine());
-//}
-//public Transform Target
-//{
-//    get => target;
-//    set
-//    {
-//        target = value;
-//        TargetVisible = false;
-//    }
-//}
-
-//private void Update()
-//{
-//    if (Target != null)
-//        TargetVisible = CheckTargetVisible();
-//}
-
-//private bool CheckTargetVisible()
-//{
-//    var result = Physics2D.Raycast(transform.position, Target.position - transform.position, showRadius, visibiltyLayer);
-//    if(result.collider != null)
-//    {
-//        return (playerLayerMask & (1 << result.collider.gameObject.layer)) != 0;
-//    }
-//    return false;
-//}
-//private void DetectTarget()
-//{
-//    if(Target== null)
-//    {
-//        CheckIfPlayerInRange();
-//    }
-//    else if (Target != null)
-//    {
-//        DetectIfOutOfRange();
-//    }
-//}
-
-//private void DetectIfOutOfRange()
-//{
-//    if(Target== null || Target.gameObject.activeSelf == false || Vector2.Distance(transform.position, Target.position) > showRadius)
-//    {
-//        Target = null;
-//    }
-//}
-
-//private void CheckIfPlayerInRange()
-//{
-//    Collider2D collision = Physics2D.OverlapCircle(transform.position, showRadius, playerLayerMask);
-//    if(collision != null)
-//    {
-//        Target = collision.transform;
-//    }
-//}
-
-//IEnumerator DetectionCoroutine()
-//{
-//    yield return new WaitForSeconds(detectionCheckDelay);
-//    DetectTarget();
-//    StartCoroutine(DetectionCoroutine());
-
-//}
-
-//private void OnDrawGizmos()
-//{
-//    Gizmos.DrawWireSphere(transform.position, showRadius);
-//}
-
-
 
