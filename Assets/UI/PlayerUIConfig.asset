@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cb378683c810914c952b2527e6d4f96, type: 3}
+  m_Name: PlayerUIConfig
+  m_EditorClassIdentifier: 
+  enemyColor: {r: 0.82641506, g: 0.16060515, b: 0.16060515, a: 1}
+  neutralColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  friendlyColor: {r: 0.09672475, g: 0.30161068, b: 0.5396226, a: 1}
+  unknownColor: {r: 1, g: 1, b: 1, a: 1}
+  selectedSprite: {fileID: 21300000, guid: 517ad83c2a158a246869468f2f8a99b2, type: 3}
+  contactSprite: {fileID: 21300000, guid: 35ad0e8b3f9d0ea44921586a64fcf5c0, type: 3}
+  moveCommandSprite: {fileID: 21300000, guid: 35ad0e8b3f9d0ea44921586a64fcf5c0, type: 3}
+  canSelectSprite: {fileID: 21300000, guid: e7ee53039f8421941a42447bb3debcab, type: 3}
+  selectTargetSound: {fileID: 8300000, guid: 78b351822fe9f4243bdb443db2617b77, type: 3}
+  targetAddedSound: {fileID: 8300000, guid: f0fee9cccada7fa4ca80ef49010486e6, type: 3}
+  targetLostSound: {fileID: 8300000, guid: 2f86da3d74b346e4d82d170546818ef9, type: 3}
+  disallowedActionSound: {fileID: 8300000, guid: f55ec65ec0dcd8a4782860e7b4b59bdf, type: 3}
+  acknowledgeCommandSound: {fileID: 8300000, guid: 602c7407f094cd6498256abce184485c, type: 3}
+  targetMarkerPrefab: {fileID: 3480489648157723674, guid: fd520b3625939b94788872adc65d4119, type: 3}
