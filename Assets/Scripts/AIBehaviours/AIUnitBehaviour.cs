@@ -1,5 +1,8 @@
 //This is the only MonoBehaviour-derived class you may modify for this challenge
 //By Joss Moo-Young
+
+// Muhammet Akkoc - Student Number : 101503896
+// Huseyin Akkoc - Student Number : 101503939
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
